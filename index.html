@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tik tok orphan | Digital Audit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --tt-pink: #fe2c55;
+            --tt-cyan: #25f4ee;
+            --tt-black: #010101;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--tt-black);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Neon Glow Background Elements */
+        .glow-sphere {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(254, 44, 85, 0.15) 0%, transparent 70%);
+            z-index: -1;
+            filter: blur(50px);
+        }
+
+        /* Hero Section */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #111 0%, #000 100%);
+        }
+
+        .logo-style {
+            font-size: clamp(3rem, 10vw, 6rem);
+            font-weight: 900;
+            text-transform: lowercase;
+            letter-spacing: -3px;
+            position: relative;
+            /* TikTok Chromatic Aberration Effect */
+            text-shadow: 4px 0px var(--tt-pink), -4px 0px var(--tt-cyan);
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Spacious Layout Blocks */
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 80vh;
+            gap: 60px;
+            padding: 100px 0;
+        }
+
+        .row.reverse { flex-direction: row-reverse; }
+
+        .text-block {
+            flex: 1;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .image-block {
+            flex: 1;
+            position: relative;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.8s ease-out;
+        }
+
+        /* Visual image styling */
+        .image-block img {
+            width: 100%;
+            border-radius: 24px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Animation trigger classes */
+        .is-visible {
+            opacity: 1 !important;
+            transform: translate(0) scale(1) !important;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, var(--tt-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 15px;
+            background: var(--glass);
+            border: 1px solid var(--tt-pink);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: var(--tt-pink);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Button */
+        .btn-tiktok {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 18px 45px;
+            background: #fff;
+            color: #000;
+            text-decoration: none;
+            font-weight: 800;
+            border-radius: 12px;
+            transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(255,255,255,0.1);
+        }
+
+        .btn-tiktok:hover {
+            transform: translateY(-5px);
+            background: var(--tt-cyan);
+            box-shadow: 0 15px 30px rgba(37, 244, 238, 0.3);
+        }
+
+        footer {
+            padding: 150px 0 50px;
+            text-align: center;
+            border-top: 1px solid #222;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .row, .row.reverse { flex-direction: column; text-align: center; }
+            .logo-style { font-size: 4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glow-sphere" style="top: 10%; left: -10%;"></div>
+    <div class="glow-sphere" style="bottom: 10%; right: -10%;"></div>
+
+    <header>
+        <div class="logo-style">Tik tok blizz </div>
+        <p style="letter-spacing: 5px; opacity: 0.6;">2026 PLATFORM AUDIT</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="row animate-me">
+            <div class="image-block">
+                <img src="1000181309.jpg" alt="1000181309">
+            </div>
+            <div class="text-block">
+                <span class="badge">Affiliate Booster +1</span>
+                <h2>The Incredible Rise</h2>
+                <p>Today, I want to talk about the incredible rise of TikTok. In just a few years, TikTok has transformed from a simple video app into a global powerhouse.</p>
+            </div>
+        </div>
+
+        <div class="row reverse animate-me">
+            <div class="image-block">
+                <img src="1000181308.jpg" alt="1000181308">
+            </div>
+            <div class="text-block">
+                <span class="badge">Affiliate Booster</span>
+                <h2>2 Billion Strong</h2>
+                <p>As of 2026, it has grown to nearly 2 billion users worldwide, with millions joining every day. In the United States alone, over 100 million people use TikTok, making it one of the most popular platforms in the country.</p>
+            </div>
+        </div>
+
+        <div class="row animate-me">
+            <div class="image-block">
+                <img src="1000181318.jpg" alt="1000181318">
+            </div>
+            <div class="text-block">
+                <span class="badge">Dreamgrow Insights</span>
+                <h2>Influence & Impact</h2>
+                <p>What makes TikTok special is not just its size, but its influence. People don’t just watch videos—they create trends, build businesses, and even learn new skills.</p>
+                <p>Users spend up to <strong>90 minutes daily</strong> on the app, showing how deeply it has become part of everyday life.</p>
+            </div>
+        </div>
+
+        <div class="row reverse animate-me">
+            <div class="image-block">
+                <img src="1000181307.jpg" alt="1000181307">
+            </div>
+            <div class="text-block">
+                <h2>Content Finds You</h2>
+                <p>TikTok is also changing how we discover content. Instead of searching, content finds you—through smart algorithms that understand what you like. This has made it one of the fastest-growing platforms in history.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="logo-style" style="font-size: 2.5rem; margin-bottom: 20px;">tik tok blizz</div>
+        <p>Ready to explore the trend?</p>
+        
+        <a href="https://www.tiktok.com/@tiktokblizz" class="btn-tiktok" target="_blank">FOLLOW ON TIKTOK</a>
+        
+        <p style="margin-top: 80px; font-size: 0.7rem; color: #444;">&copy; 2026 TikTok Orphan Digital Audit. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const observerOptions = {
+            threshold: 0.2
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.querySelectorAll('.text-block, .image-block').forEach(el => {
+                        el.classList.add('is-visible');
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-me').forEach(row => {
+            observer.observe(row);
+        });
+    </script>
+
+</body>
+</html>
